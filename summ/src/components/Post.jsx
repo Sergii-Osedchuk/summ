@@ -1,11 +1,12 @@
 import { string } from 'prop-types';
+import classes from './Post.module.css';
 
 const Post = ({ name, occupation }) => {
 
   return (
-    <div>
-      <p>{name}</p>
-      <p>{occupation}</p>
+    <div className={classes.post}>
+      <p className={classes.author}>{name}</p>
+      <p className={classes.text}>{occupation}</p>
     </div>
   );
 }
