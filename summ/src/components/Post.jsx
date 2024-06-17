@@ -1,14 +1,18 @@
-const names = ['Sergio', 'Olegio'];
+import { string } from 'prop-types';
 
-const Post = () => {
-  const chosenName = Math.random() > 0.5 ? names[0] : names[1];
+const Post = ({ name, occupation }) => {
 
   return (
     <div>
-      <p>{chosenName}</p>
-      <p>I like coding in JS</p>
+      <p>{name}</p>
+      <p>{occupation}</p>
     </div>
   );
+}
+
+Post.propTypes = {
+  name: string,
+  occupation: string
 }
 
 export default Post;
