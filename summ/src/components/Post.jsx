@@ -1,12 +1,15 @@
 import { string } from 'prop-types';
 import classes from './Post.module.css';
+import { Link } from 'react-router-dom';
 
-const Post = ({ name, occupation }) => {
+const Post = ({ id, name, occupation }) => {
 
   return (
     <div className={classes.post}>
-      <p className={classes.author}>{name}</p>
-      <p className={classes.text}>{occupation}</p>
+      <Link to={id}>
+        <p className={classes.author}>{name}</p>
+        <p className={classes.text}>{occupation}</p>
+      </Link>
     </div>
   );
 }

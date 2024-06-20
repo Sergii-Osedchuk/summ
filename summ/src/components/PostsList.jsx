@@ -9,7 +9,7 @@ const PostsList = () => {
       {posts.length > 0 && (
         <ul className={classes.posts}>
           {posts.map((post) => (
-            <Post name={post.author} occupation={post.body} key={post.body} />
+            <Post id={post.id} name={post.author} occupation={post.body} key={post.id} />
           ))}
         </ul>
       )}
